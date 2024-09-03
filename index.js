@@ -13,7 +13,7 @@ const server = require('http').createServer(app);
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-const port = '4000';
+const port = process.env.port || 4000;
 app.set('port', port);
 
 const router = express.Router();
